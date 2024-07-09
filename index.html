@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>Engineering</h1>
+                <h1>Unit Calculator</h1>
+            </div>
+            <img id="logo" src="logo.png" alt="Logo">
+            
+            
+        </header>
+        <div class="converter-box">
+            <div class="converter">
+                
+                <label for="category">Select Category:</label>
+                <select id="category" onchange="updateUnits()">
+
+                    
+                    <option value="length">Length</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                    <option value="mass">Mass/Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="force">Force</option>
+                    <option value="energy">Energy</option>
+                    <option value="power">Power</option>
+                    <option value="electrical">Electrical</option>
+                    <option value="storage">Data Storage</option>
+                    <option value="time">Time</option>
+                    <option value="speed">Speed</option>
+                    <option value="flow">Flow Rate</option>
+                    <!-- Add more categories as needed -->
+                </select>
+                <label for="value">Enter Value:</label>
+                <input type="number" id="value" placeholder="Enter value">
+                <label for="from-unit">From:</label>
+                <select id="from-unit">
+                    <!-- Options will be populated dynamically based on category -->
+                </select>
+
+                <label for="to-unit">To:</label>
+                <select id="to-unit">
+                    <!-- Options will be populated dynamically based on category -->
+                </select>
+
+                <button onclick="convert()">Convert</button>
+
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
